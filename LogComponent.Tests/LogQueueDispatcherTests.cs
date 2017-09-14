@@ -30,7 +30,7 @@ namespace LogComponent.Tests
     }
 
     // I was unable to control the asynchronous behavior of the dispatcher, thus the two last tests are unreliable.
-    // A solution could be consider AsyncLog a process of its own. In that case,
+    // Another solution could be to consider AsyncLog a process of its own. In that case,
     // I would create the service using TopShelf and Quartz, introduce a message bus (such as RabbitMQ), have it subscribe to 
     // WriteLog events and publish WriteLog events from Program.cs. That would abstract the asynchronous behavior away thus making
     // unit tests easier. In that case Start, Stop and FlushAndStop behavior would belong in an integration test. Writing to different 

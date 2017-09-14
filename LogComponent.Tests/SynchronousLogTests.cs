@@ -7,10 +7,9 @@ namespace LogComponent.Tests
 {
     public class SynchronousLogTests : LogComponentTestBase
     {
+        // Synchronous logger was made first to test this behavior. 
 
-        // I made a Synchronous logger first to test this behavior. 
-
-        //This test revealed error in how 'Past midnight is determined'. 
+        //This test revealed error in how 'Past midnight' is determined. 
         //(now - _curDate).Days != 0   to      SystemTime.Now().Day - _curDate.Day != 0;
         [Fact]
         public void ShouldCreateNewLogFileWhenCrossingMidnight()

@@ -9,7 +9,8 @@ namespace LogComponent.Tests
 {
     public class LogServiceTestBase
     {
-        //Repository tests would require a read method, thus it has been omitted.
+        // Repository tests would require a read method. I felt like repository testing was not the purpose of LogTest and
+        // thus it has been omitted.
         public Mock<ILogRepository> LogRepo;
 
         public LogService BuildLogService()

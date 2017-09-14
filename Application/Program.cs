@@ -17,7 +17,7 @@ namespace LogUsers
      *   - An occasional runtime exception was thrown, when write and read to logline list happend at the same time. This has been fixed
      *     using locking of the loglines list.
      *     
-     * Another solution would be to make AsyncLog a process of it's own, introduce a bus (like RabbitMQ) and have it subscript 
+     * Another solution would be to make AsyncLog a process of it's own, introduce a bus (like RabbitMQ) and have it subscripe 
      * to WriteLog events. The program below would then publish LogWrite events. This would abstract queue, start, stop and flush functionality 
      * away from the code and unit tests and into integration tests instead. 
      * Writing to different files would be handled using topics.
